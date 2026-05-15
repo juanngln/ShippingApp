@@ -1,0 +1,430 @@
+2/18/2026 10:55:23 AM: [STEP 1] Login attempt: btmjhonj at 2/18/2026 10:55:23 AM
+2/18/2026 10:55:25 AM: [STEP 2] AD login successful. FullName: Jhonatan Sidabutar
+2/18/2026 10:55:26 AM: [STEP 3] LastLogin updated.
+2/18/2026 10:55:26 AM: [STEP 4] Session variables set.
+2/18/2026 10:55:26 AM: [STEP 5] Redirecting to Dashboard...
+2/18/2026 11:15:10 AM: [STEP 1] Login attempt: btmjuanj at 2/18/2026 11:15:10 AM
+2/18/2026 11:15:11 AM: [STEP 2] AD login successful. FullName: Juan Jonathan Nainggolan
+2/18/2026 11:15:11 AM: [STEP 3] LastLogin updated.
+2/18/2026 11:15:11 AM: [STEP 4] Session variables set.
+2/18/2026 11:15:11 AM: [STEP 5] Redirecting to Dashboard...
+2/18/2026 11:20:56 AM: [STEP 1] Login attempt: btmjuanj at 2/18/2026 11:20:56 AM
+2/18/2026 11:20:57 AM: [STEP 2] AD login successful. FullName: Juan Jonathan Nainggolan
+2/18/2026 11:20:59 AM: [STEP 3] LastLogin updated.
+2/18/2026 11:20:59 AM: [STEP 4] Session variables set.
+2/18/2026 11:20:59 AM: [STEP 5] Redirecting to Dashboard...
+2/18/2026 11:21:38 AM: [STEP 1] Login attempt: btmjhonj at 2/18/2026 11:21:38 AM
+2/18/2026 11:21:39 AM: LoginAD Exception: The user name or password is incorrect.
+
+2/18/2026 11:21:39 AM: [FAILED] AD login failed.
+2/18/2026 11:21:49 AM: [STEP 1] Login attempt: btmjhonj at 2/18/2026 11:21:49 AM
+2/18/2026 11:21:49 AM: [STEP 2] AD login successful. FullName: Jhonatan Sidabutar
+2/18/2026 11:21:49 AM: [STEP 3] LastLogin updated.
+2/18/2026 11:21:49 AM: [STEP 4] Session variables set.
+2/18/2026 11:21:49 AM: [STEP 5] Redirecting to Dashboard...
+2/18/2026 11:22:35 AM: [STEP 1] Login attempt: btmjhonj at 2/18/2026 11:22:35 AM
+2/18/2026 11:22:35 AM: [STEP 2] AD login successful. FullName: Jhonatan Sidabutar
+2/18/2026 11:22:35 AM: [STEP 3] LastLogin updated.
+2/18/2026 11:22:35 AM: [STEP 4] Session variables set.
+2/18/2026 11:22:35 AM: [STEP 5] Redirecting to Dashboard...
+2/18/2026 11:25:06 AM: [STEP 1] Login attempt: btmjhonj at 2/18/2026 11:25:06 AM
+2/18/2026 11:25:06 AM: [STEP 2] AD login successful. FullName: Jhonatan Sidabutar
+2/18/2026 11:25:06 AM: [STEP 3] LastLogin updated.
+2/18/2026 11:25:06 AM: [STEP 4] Session variables set.
+2/18/2026 11:25:06 AM: [STEP 5] Redirecting to Dashboard...
+2/18/2026 11:26:43 AM: [STEP 1] Login attempt: btmjhonj at 2/18/2026 11:26:43 AM
+2/18/2026 11:26:45 AM: [STEP 2] AD login successful. FullName: Jhonatan Sidabutar
+2/18/2026 11:26:46 AM: [STEP 3] LastLogin updated.
+2/18/2026 11:26:46 AM: [STEP 4] Session variables set.
+2/18/2026 11:26:46 AM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 9:03:30 AM: [STEP 1] Login attempt: btmjuanj at 2/19/2026 9:03:30 AM
+2/19/2026 9:03:31 AM: [STEP 2] AD login successful. FullName: Juan Jonathan Nainggolan
+2/19/2026 9:03:31 AM: [STEP 3] LastLogin updated. Role: Logistic
+2/19/2026 9:03:31 AM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 9:16:40 AM: [STEP 1] Login attempt: btmnurun at 2/19/2026 9:16:40 AM
+2/19/2026 9:16:41 AM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/19/2026 9:16:42 AM: [STEP 3] LastLogin updated. Role: PA
+2/19/2026 9:16:42 AM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 9:32:31 AM: [STEP 1] Login attempt: btmjuanj at 2/19/2026 9:32:31 AM
+2/19/2026 9:32:32 AM: [STEP 2] AD login successful. FullName: Juan Jonathan Nainggolan
+2/19/2026 9:32:33 AM: [STEP 3] LastLogin updated. Role: Logistic
+2/19/2026 9:32:33 AM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 10:09:10 AM: [STEP 1] Login attempt: btnnurun at 2/19/2026 10:09:10 AM
+2/19/2026 10:09:10 AM: LoginAD Exception: The user name or password is incorrect.
+
+2/19/2026 10:09:10 AM: [FAILED] AD login failed.
+2/19/2026 10:09:22 AM: [STEP 1] Login attempt: btnnurun at 2/19/2026 10:09:22 AM
+2/19/2026 10:09:22 AM: LoginAD Exception: The user name or password is incorrect.
+
+2/19/2026 10:09:22 AM: [FAILED] AD login failed.
+2/19/2026 10:09:44 AM: [STEP 1] Login attempt: btmnurun at 2/19/2026 10:09:44 AM
+2/19/2026 10:09:45 AM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/19/2026 10:09:45 AM: [STEP 3] LastLogin updated. Role: PA
+2/19/2026 10:09:45 AM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 10:13:12 AM: [STEP 1] Login attempt: btmjuanj at 2/19/2026 10:13:12 AM
+2/19/2026 10:13:12 AM: LoginAD Exception: The user name or password is incorrect.
+
+2/19/2026 10:13:12 AM: [FAILED] AD login failed.
+2/19/2026 10:13:23 AM: [STEP 1] Login attempt: btmjuanj at 2/19/2026 10:13:23 AM
+2/19/2026 10:13:24 AM: [STEP 2] AD login successful. FullName: Juan Jonathan Nainggolan
+2/19/2026 10:13:24 AM: [STEP 3] LastLogin updated. Role: Logistic
+2/19/2026 10:13:24 AM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 10:22:51 AM: [STEP 1] Login attempt: btmjuanj at 2/19/2026 10:22:51 AM
+2/19/2026 10:22:52 AM: [STEP 2] AD login successful. FullName: Juan Jonathan Nainggolan
+2/19/2026 10:22:53 AM: [STEP 3] LastLogin updated. Role: Logistic
+2/19/2026 10:22:53 AM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 10:23:41 AM: [STEP 1] Login attempt: btmnurun at 2/19/2026 10:23:41 AM
+2/19/2026 10:23:41 AM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/19/2026 10:23:41 AM: [STEP 3] LastLogin updated. Role: PA
+2/19/2026 10:23:41 AM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 3:04:01 PM: [STEP 1] Login attempt: btmnurun at 2/19/2026 3:04:01 PM
+2/19/2026 3:04:02 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/19/2026 3:04:02 PM: [STEP 3] LastLogin updated. Role: PA
+2/19/2026 3:04:02 PM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 3:08:37 PM: [STEP 1] Login attempt: btmnurun at 2/19/2026 3:08:37 PM
+2/19/2026 3:08:38 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/19/2026 3:08:39 PM: [STEP 3] LastLogin updated. Role: PA
+2/19/2026 3:08:39 PM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 3:14:45 PM: [STEP 1] Login attempt: btmnurun at 2/19/2026 3:14:45 PM
+2/19/2026 3:14:46 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/19/2026 3:14:46 PM: [STEP 3] LastLogin updated. Role: PA
+2/19/2026 3:14:46 PM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 3:21:41 PM: [STEP 1] Login attempt: btmnurun at 2/19/2026 3:21:41 PM
+2/19/2026 3:21:42 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/19/2026 3:21:42 PM: [STEP 3] LastLogin updated. Role: PA
+2/19/2026 3:21:42 PM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 3:40:48 PM: [STEP 1] Login attempt: btmnurun at 2/19/2026 3:40:47 PM
+2/19/2026 3:40:48 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/19/2026 3:40:49 PM: [STEP 3] LastLogin updated. Role: PA
+2/19/2026 3:40:49 PM: [STEP 5] Redirecting to Dashboard...
+2/19/2026 4:02:33 PM: [STEP 1] Login attempt: btmjuanj at 2/19/2026 4:02:33 PM
+2/19/2026 4:02:33 PM: [STEP 2] AD login successful. FullName: Juan Jonathan Nainggolan
+2/19/2026 4:02:34 PM: [STEP 3] LastLogin updated. Role: Logistic
+2/19/2026 4:02:34 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 9:02:30 AM: [STEP 1] Login attempt: btmnurun at 2/20/2026 9:02:30 AM
+2/20/2026 9:02:31 AM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 9:02:32 AM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 9:02:32 AM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 10:40:01 AM: [STEP 1] Login attempt: btmnurun at 2/20/2026 10:40:01 AM
+2/20/2026 10:40:02 AM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 10:40:03 AM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 10:40:03 AM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 11:22:29 AM: [STEP 1] Login attempt: btmnurun at 2/20/2026 11:22:29 AM
+2/20/2026 11:22:31 AM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 11:22:32 AM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 11:22:32 AM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 11:27:22 AM: [STEP 1] Login attempt: btmnurun at 2/20/2026 11:27:22 AM
+2/20/2026 11:27:23 AM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 11:27:24 AM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 11:27:24 AM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 1:40:12 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 1:40:12 PM
+2/20/2026 1:40:12 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 1:40:13 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 1:40:13 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 1:44:09 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 1:44:09 PM
+2/20/2026 1:44:10 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 1:44:11 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 1:44:11 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 1:53:06 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 1:53:06 PM
+2/20/2026 1:53:07 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 1:53:07 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 1:53:07 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 2:21:43 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 2:21:43 PM
+2/20/2026 2:21:44 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 2:21:44 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 2:21:44 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 2:23:20 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 2:23:20 PM
+2/20/2026 2:23:20 PM: LoginAD Exception: The user name or password is incorrect.
+
+2/20/2026 2:23:20 PM: [FAILED] AD login failed.
+2/20/2026 2:23:29 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 2:23:29 PM
+2/20/2026 2:23:30 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 2:23:30 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 2:23:30 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 2:27:20 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 2:27:20 PM
+2/20/2026 2:27:20 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 2:27:21 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 2:27:21 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 2:34:03 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 2:34:03 PM
+2/20/2026 2:34:04 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 2:34:04 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 2:34:04 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 2:43:31 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 2:43:31 PM
+2/20/2026 2:43:32 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 2:43:32 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 2:43:32 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 2:50:57 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 2:50:57 PM
+2/20/2026 2:50:57 PM: LoginAD Exception: The user name or password is incorrect.
+
+2/20/2026 2:50:57 PM: [FAILED] AD login failed.
+2/20/2026 2:51:06 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 2:51:06 PM
+2/20/2026 2:51:07 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 2:51:08 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 2:51:08 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 3:31:09 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 3:31:09 PM
+2/20/2026 3:31:09 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 3:31:09 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 3:31:09 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 3:37:31 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 3:37:31 PM
+2/20/2026 3:37:31 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 3:37:32 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 3:37:32 PM: [STEP 5] Redirecting to Dashboard...
+2/20/2026 3:47:24 PM: [STEP 1] Login attempt: btmnurun at 2/20/2026 3:47:23 PM
+2/20/2026 3:47:25 PM: [STEP 2] AD login successful. FullName: Nurul Aulia Farawansya
+2/20/2026 3:47:26 PM: [STEP 3] LastLogin updated. Role: PA
+2/20/2026 3:47:26 PM: [STEP 5] Redirecting to Dashboard...
+24/02/2026 15:30:22: [STEP 1] Login attempt: btmjuanj at 24/02/2026 15:30:22
+24/02/2026 15:41:43: [STEP 1] Login attempt: btmjuanj at 24/02/2026 15:41:43
+24/02/2026 15:41:44: [STEP 2 & 3] DB login successful. Role: PA
+24/02/2026 15:41:44: [STEP 5] Redirecting to Dashboard...
+24/02/2026 15:55:10: [STEP 1] Login attempt: btmjuanj at 24/02/2026 15:55:10
+24/02/2026 15:55:10: [STEP 2 & 3] DB login successful. Role: PA
+24/02/2026 15:55:10: [STEP 5] Redirecting to Dashboard...
+25/02/2026 09:35:25: [STEP 1] Login attempt: btmjuanj at 25/02/2026 09:35:25
+25/02/2026 09:35:26: [STEP 2 & 3] DB login successful. Role: PA
+25/02/2026 09:35:26: [STEP 5] Redirecting to Dashboard...
+26/02/2026 13:57:32: [STEP 1] Login attempt: btmjuanj at 26/02/2026 13:57:32
+26/02/2026 13:57:36: [STEP 2 & 3] DB login successful. Role: PA
+26/02/2026 13:57:36: [STEP 5] Redirecting to Dashboard...
+26/02/2026 14:29:34: [STEP 1] Login attempt: btmjuanj at 26/02/2026 14:29:34
+26/02/2026 14:29:35: [STEP 2 & 3] DB login successful. Role: PA
+26/02/2026 14:29:35: [STEP 5] Redirecting to Dashboard...
+26/02/2026 14:36:28: [STEP 1] Login attempt: btmjuanj at 26/02/2026 14:36:28
+26/02/2026 14:36:28: [STEP 2 & 3] DB login successful. Role: PA
+26/02/2026 14:36:28: [STEP 5] Redirecting to Dashboard...
+26/02/2026 15:02:18: [STEP 1] Login attempt: btmjuanj at 26/02/2026 15:02:18
+26/02/2026 15:02:19: [STEP 2 & 3] DB login successful. Role: PA
+26/02/2026 15:02:19: [STEP 5] Redirecting to Dashboard...
+26/02/2026 15:18:00: [STEP 1] Login attempt: btmjuanj at 26/02/2026 15:18:00
+26/02/2026 15:18:00: [STEP 2 & 3] DB login successful. Role: PA
+26/02/2026 15:18:00: [STEP 5] Redirecting to Dashboard...
+26/02/2026 15:26:42: [STEP 1] Login attempt: btmjuanj at 26/02/2026 15:26:42
+26/02/2026 15:26:43: [STEP 2 & 3] DB login successful. Role: PA
+26/02/2026 15:26:43: [STEP 5] Redirecting to Dashboard...
+26/02/2026 15:34:24: [STEP 1] Login attempt: btmjuanj at 26/02/2026 15:34:24
+26/02/2026 15:34:24: [STEP 2 & 3] DB login successful. Role: PA
+26/02/2026 15:34:24: [STEP 5] Redirecting to Dashboard...
+05/03/2026 10:02:08: [STEP 1] Login attempt: btmjuanj at 05/03/2026 10:02:08
+05/03/2026 10:02:17: [STEP 2 & 3] DB login successful. Role: PA
+05/03/2026 10:02:17: [STEP 5] Redirecting to Dashboard...
+05/03/2026 10:10:56: [STEP 1] Login attempt: AdminShipping at 05/03/2026 10:10:56
+05/03/2026 10:10:56: [STEP 2 & 3] DB login successful. Role: Logistic
+05/03/2026 10:10:56: [STEP 5] Redirecting to Dashboard...
+05/03/2026 10:31:30: [STEP 1] Login attempt: AdminShipping at 05/03/2026 10:31:30
+05/03/2026 10:31:32: [STEP 2 & 3] DB login successful. Role: Logistic
+05/03/2026 10:31:32: [STEP 5] Redirecting to Dashboard...
+05/03/2026 14:24:23: [STEP 1] Login attempt: AdminShipping at 05/03/2026 14:24:23
+05/03/2026 14:24:24: [STEP 2 & 3] DB login successful. Role: Logistic
+05/03/2026 14:24:24: [STEP 5] Redirecting to Dashboard...
+06/03/2026 10:09:15: [STEP 1] Login attempt: AdminShipping at 06/03/2026 10:09:15
+06/03/2026 10:09:16: [STEP 2 & 3] DB login successful. Role: Logistic
+06/03/2026 10:09:16: [STEP 5] Redirecting to Dashboard...
+06/03/2026 10:50:24: [STEP 1] Login attempt: AdminShipping at 06/03/2026 10:50:24
+06/03/2026 10:50:24: [STEP 2 & 3] DB login successful. Role: Logistic
+06/03/2026 10:50:24: [STEP 5] Redirecting to Dashboard...
+06/03/2026 10:55:05: [STEP 1] Login attempt: AdminShipping at 06/03/2026 10:55:05
+06/03/2026 10:55:05: [STEP 2 & 3] DB login successful. Role: Logistic
+06/03/2026 10:55:05: [STEP 5] Redirecting to Dashboard...
+06/03/2026 11:09:42: [STEP 1] Login attempt: AdminShipping at 06/03/2026 11:09:42
+06/03/2026 11:09:42: [STEP 2 & 3] DB login successful. Role: Logistic
+06/03/2026 11:09:42: [STEP 5] Redirecting to Dashboard...
+06/03/2026 14:23:27: [STEP 1] Login attempt: AdminShipping at 06/03/2026 14:23:27
+06/03/2026 14:23:27: [STEP 2 & 3] DB login successful. Role: Logistic
+06/03/2026 14:23:27: [STEP 5] Redirecting to Dashboard...
+06/03/2026 15:11:41: [STEP 1] Login attempt: AdminShipping at 06/03/2026 15:11:41
+06/03/2026 15:11:42: [STEP 2 & 3] DB login successful. Role: Logistic
+06/03/2026 15:11:42: [STEP 5] Redirecting to Dashboard...
+06/03/2026 15:48:39: [STEP 1] Login attempt: AdminPA at 06/03/2026 15:48:39
+06/03/2026 15:48:39: [STEP 2 & 3] DB login successful. Role: PA
+06/03/2026 15:48:39: [STEP 5] Redirecting to Dashboard...
+06/03/2026 15:50:26: [STEP 1] Login attempt: AdminShipping at 06/03/2026 15:50:26
+06/03/2026 15:50:26: [STEP 2 & 3] DB login successful. Role: Logistic
+06/03/2026 15:50:26: [STEP 5] Redirecting to Dashboard...
+10/03/2026 13:46:31: [STEP 1] Login attempt: AdminShipping at 10/03/2026 13:46:31
+10/03/2026 13:46:32: [STEP 2 & 3] DB login successful. Role: Logistic
+10/03/2026 13:46:32: [STEP 5] Redirecting to Dashboard...
+10/03/2026 14:47:43: [STEP 1] Login attempt: AdminShipping at 10/03/2026 14:47:43
+10/03/2026 14:47:43: [STEP 2 & 3] DB login successful. Role: Logistic
+10/03/2026 14:47:43: [STEP 5] Redirecting to Dashboard...
+10/03/2026 15:32:43: [STEP 1] Login attempt: AdminShipping at 10/03/2026 15:32:43
+10/03/2026 15:32:45: [STEP 2 & 3] DB login successful. Role: Logistic
+10/03/2026 15:32:45: [STEP 5] Redirecting to Dashboard...
+11/03/2026 09:25:15: [STEP 1] Login attempt: AdminShipping at 11/03/2026 09:25:15
+11/03/2026 09:25:16: [STEP 2 & 3] DB login successful. Role: Logistic
+11/03/2026 09:25:16: [STEP 5] Redirecting to Dashboard...
+11/03/2026 09:59:48: [STEP 1] Login attempt: AdminShipping at 11/03/2026 09:59:48
+11/03/2026 09:59:48: [STEP 2 & 3] DB login successful. Role: Logistic
+11/03/2026 09:59:48: [STEP 5] Redirecting to Dashboard...
+11/03/2026 11:08:56: [STEP 1] Login attempt: AdminShipping at 11/03/2026 11:08:56
+11/03/2026 11:08:57: [STEP 2 & 3] DB login successful. Role: Logistic
+11/03/2026 11:08:57: [STEP 5] Redirecting to Dashboard...
+11/03/2026 11:27:56: [STEP 1] Login attempt: AdminShipping at 11/03/2026 11:27:56
+11/03/2026 11:27:57: [STEP 2 & 3] DB login successful. Role: Logistic
+11/03/2026 11:27:57: [STEP 5] Redirecting to Dashboard...
+11/03/2026 15:26:23: [STEP 1] Login attempt: AdminShipping at 11/03/2026 15:26:23
+11/03/2026 15:26:24: [STEP 2 & 3] DB login successful. Role: Logistic
+11/03/2026 15:26:24: [STEP 5] Redirecting to Dashboard...
+11/03/2026 15:30:26: [STEP 1] Login attempt: AdminShipping at 11/03/2026 15:30:26
+11/03/2026 15:30:26: [STEP 2 & 3] DB login successful. Role: Logistic
+11/03/2026 15:30:26: [STEP 5] Redirecting to Dashboard...
+11/03/2026 16:00:59: [STEP 1] Login attempt: AdminShipping at 11/03/2026 16:00:59
+11/03/2026 16:01:01: [STEP 2 & 3] DB login successful. Role: Logistic
+11/03/2026 16:01:01: [STEP 5] Redirecting to Dashboard...
+11/03/2026 16:03:54: [STEP 1] Login attempt: AdminShipping at 11/03/2026 16:03:54
+11/03/2026 16:03:55: [STEP 2 & 3] DB login successful. Role: Logistic
+11/03/2026 16:03:55: [STEP 5] Redirecting to Dashboard...
+12/03/2026 14:46:41: [STEP 1] Login attempt: AdminShipping at 12/03/2026 14:46:41
+12/03/2026 14:46:52: [STEP 2 & 3] DB login successful. Role: Logistic
+12/03/2026 14:46:52: [STEP 5] Redirecting to Dashboard...
+12/03/2026 15:18:00: [STEP 1] Login attempt: AdminShipping at 12/03/2026 15:18:00
+12/03/2026 15:18:08: [STEP 2 & 3] DB login successful. Role: Logistic
+12/03/2026 15:18:08: [STEP 5] Redirecting to Dashboard...
+18/03/2026 09:16:41: [STEP 1] Login attempt: DevShipping at 18/03/2026 09:16:41
+18/03/2026 09:16:41: [FAILED] Database login failed or unauthorized.
+18/03/2026 09:16:47: [STEP 1] Login attempt: DevShipping at 18/03/2026 09:16:47
+18/03/2026 09:16:47: [FAILED] Database login failed or unauthorized.
+18/03/2026 09:17:20: [STEP 1] Login attempt: AdminShipping at 18/03/2026 09:17:20
+18/03/2026 09:17:20: [STEP 2 & 3] DB login successful. Role: Logistic
+18/03/2026 09:17:20: [STEP 5] Redirecting to Dashboard...
+18/03/2026 09:37:34: [STEP 1] Login attempt: AdminShipping at 18/03/2026 09:37:34
+18/03/2026 09:37:36: [STEP 2 & 3] DB login successful. Role: Logistic
+18/03/2026 09:37:36: [STEP 5] Redirecting to Dashboard...
+18/03/2026 09:46:32: [STEP 1] Login attempt: AdminShipping at 18/03/2026 09:46:32
+18/03/2026 09:46:33: [STEP 2 & 3] DB login successful. Role: Logistic
+18/03/2026 09:46:33: [STEP 5] Redirecting to Dashboard...
+18/03/2026 09:57:08: [STEP 1] Login attempt: AdminShipping at 18/03/2026 09:57:08
+18/03/2026 09:57:08: [STEP 2 & 3] DB login successful. Role: Logistic
+18/03/2026 09:57:08: [STEP 5] Redirecting to Dashboard...
+18/03/2026 10:50:17: [STEP 1] Login attempt: AdminShipping at 18/03/2026 10:50:17
+18/03/2026 10:50:19: [STEP 2 & 3] DB login successful. Role: Logistic
+18/03/2026 10:50:19: [STEP 5] Redirecting to Dashboard...
+20/03/2026 10:40:34: [STEP 1] Login attempt: AdminShipping at 20/03/2026 10:40:34
+20/03/2026 10:41:09: [FAILED] Database login failed or unauthorized.
+20/03/2026 10:41:37: [STEP 1] Login attempt: AdminShipping at 20/03/2026 10:41:37
+20/03/2026 10:41:37: [FAILED] Database login failed or unauthorized.
+20/03/2026 10:41:43: [STEP 1] Login attempt: AdminShipping at 20/03/2026 10:41:43
+20/03/2026 10:41:43: [FAILED] Database login failed or unauthorized.
+20/03/2026 10:41:58: [STEP 1] Login attempt: AdminShipping at 20/03/2026 10:41:58
+20/03/2026 10:41:58: [FAILED] Database login failed or unauthorized.
+20/03/2026 10:42:10: [STEP 1] Login attempt: AdminShipping at 20/03/2026 10:42:10
+20/03/2026 10:42:10: [FAILED] Database login failed or unauthorized.
+20/03/2026 10:56:46: [STEP 1] Login attempt: shipping at 20/03/2026 10:56:46
+20/03/2026 10:56:47: [STEP 2 & 3] DB login successful. Role: Logistic
+20/03/2026 10:56:47: [STEP 5] Redirecting to Dashboard...
+20/03/2026 14:09:51: [STEP 1] Login attempt: shipping at 20/03/2026 14:09:51
+20/03/2026 14:09:52: [STEP 2 & 3] DB login successful. Role: Logistic
+20/03/2026 14:09:52: [STEP 5] Redirecting to Dashboard...
+20/03/2026 15:11:57: [STEP 1] Login attempt: shipping at 20/03/2026 15:11:57
+20/03/2026 15:11:57: [STEP 2 & 3] DB login successful. Role: Logistic
+20/03/2026 15:11:57: [STEP 5] Redirecting to Dashboard...
+20/03/2026 15:57:37: [STEP 1] Login attempt: shipping at 20/03/2026 15:57:37
+20/03/2026 15:57:38: [STEP 1] Login attempt: shipping at 20/03/2026 15:57:38
+20/03/2026 15:57:39: [STEP 2 & 3] DB login successful. Role: Logistic
+20/03/2026 15:57:39: [STEP 5] Redirecting to Dashboard...
+20/03/2026 15:57:39: [STEP 5] Redirecting to Dashboard...
+23/03/2026 08:58:57: [STEP 1] Login attempt: shipping at 23/03/2026 08:58:57
+23/03/2026 08:58:59: [STEP 2 & 3] DB login successful. Role: Logistic
+23/03/2026 08:58:59: [STEP 5] Redirecting to Dashboard...
+23/03/2026 10:31:43: [STEP 1] Login attempt: shipping at 23/03/2026 10:31:43
+23/03/2026 10:31:52: [STEP 2 & 3] DB login successful. Role: Logistic
+23/03/2026 10:31:52: [STEP 5] Redirecting to Dashboard...
+23/03/2026 11:19:04: [STEP 1] Login attempt: shipping at 23/03/2026 11:19:04
+23/03/2026 11:19:07: [STEP 2 & 3] DB login successful. Role: Logistic
+23/03/2026 11:19:07: [STEP 5] Redirecting to Dashboard...
+23/03/2026 11:28:51: [STEP 1] Login attempt: shipping at 23/03/2026 11:28:51
+23/03/2026 11:28:53: [STEP 2 & 3] DB login successful. Role: Logistic
+23/03/2026 11:28:53: [STEP 5] Redirecting to Dashboard...
+26/03/2026 14:56:39: [STEP 1] Login attempt: shipping at 26/03/2026 14:56:39
+26/03/2026 14:56:45: [STEP 2 & 3] DB login successful. Role: Logistic
+26/03/2026 14:56:45: [STEP 5] Redirecting to Dashboard...
+26/03/2026 15:20:01: [STEP 1] Login attempt: shipping at 26/03/2026 15:20:01
+26/03/2026 15:20:03: [STEP 2 & 3] DB login successful. Role: Logistic
+26/03/2026 15:20:03: [STEP 5] Redirecting to Dashboard...
+12/04/2026 23:46:24: [STEP 1] Login attempt: logistic at 12/04/2026 23:46:24
+12/04/2026 23:46:26: LoginDB Exception: Cannot attach file 'C:\Users\user\DevShipping.mdf' as database 'DB_Shipping_Demo' because this database name is already attached with file 'C:\Users\user\DB_Shipping_Demo.mdf'
+12/04/2026 23:46:26: [FAILED] Database login failed or unauthorized.
+12/04/2026 23:46:37: [STEP 1] Login attempt: logistic at 12/04/2026 23:46:37
+12/04/2026 23:46:37: LoginDB Exception: Cannot attach file 'C:\Users\user\DevShipping.mdf' as database 'DB_Shipping_Demo' because this database name is already attached with file 'C:\Users\user\DB_Shipping_Demo.mdf'
+12/04/2026 23:46:37: [FAILED] Database login failed or unauthorized.
+12/04/2026 23:52:49: [STEP 1] Login attempt: logistic at 12/04/2026 23:52:48
+12/04/2026 23:52:50: [STEP 2 & 3] DB login successful. Role: Logistic
+12/04/2026 23:52:50: [STEP 5] Redirecting to Dashboard...
+12/04/2026 23:57:55: [STEP 1] Login attempt: logistic at 12/04/2026 23:57:55
+12/04/2026 23:57:58: [FAILED] Database login failed or unauthorized.
+12/04/2026 23:58:06: [STEP 1] Login attempt: logistic at 12/04/2026 23:58:06
+12/04/2026 23:58:06: [STEP 2 & 3] DB login successful. Role: Logistic
+12/04/2026 23:58:06: [STEP 5] Redirecting to Dashboard...
+13/04/2026 00:08:40: [STEP 1] Login attempt: logistic at 13/04/2026 00:08:40
+13/04/2026 00:08:41: [STEP 2 & 3] DB login successful. Role: Logistic
+13/04/2026 00:08:41: [STEP 5] Redirecting to Dashboard...
+13/04/2026 08:34:04: [STEP 1] Login attempt: logistic at 13/04/2026 08:34:04
+13/04/2026 08:34:07: [STEP 2 & 3] DB login successful. Role: Logistic
+13/04/2026 08:34:07: [STEP 5] Redirecting to Dashboard...
+13/04/2026 08:43:09: [STEP 1] Login attempt: program at 13/04/2026 08:43:09
+13/04/2026 08:43:09: [STEP 2 & 3] DB login successful. Role: PA
+13/04/2026 08:43:09: [STEP 5] Redirecting to Dashboard...
+13/04/2026 08:43:56: [STEP 1] Login attempt: admin at 13/04/2026 08:43:56
+13/04/2026 08:43:56: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 08:43:56: [STEP 5] Redirecting to Dashboard...
+13/04/2026 10:56:53: [STEP 1] Login attempt: admin at 13/04/2026 10:56:53
+13/04/2026 10:56:55: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 10:56:55: [STEP 5] Redirecting to Dashboard...
+13/04/2026 13:24:23: [STEP 1] Login attempt: logistic at 13/04/2026 13:24:23
+13/04/2026 13:24:25: [STEP 2 & 3] DB login successful. Role: Logistic
+13/04/2026 13:24:25: [STEP 5] Redirecting to Dashboard...
+13/04/2026 13:24:41: [STEP 1] Login attempt: admin at 13/04/2026 13:24:41
+13/04/2026 13:24:42: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 13:24:42: [STEP 5] Redirecting to Dashboard...
+13/04/2026 13:37:32: [STEP 1] Login attempt: admin at 13/04/2026 13:37:32
+13/04/2026 13:37:32: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 13:37:32: [STEP 5] Redirecting to Dashboard...
+13/04/2026 13:50:14: [STEP 1] Login attempt: admin at 13/04/2026 13:50:14
+13/04/2026 13:50:18: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 13:50:18: [STEP 5] Redirecting to Dashboard...
+13/04/2026 14:12:00: [STEP 1] Login attempt: admin at 13/04/2026 14:12:00
+13/04/2026 14:12:03: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 14:12:03: [STEP 5] Redirecting to Dashboard...
+13/04/2026 14:24:34: [STEP 1] Login attempt: admin at 13/04/2026 14:24:34
+13/04/2026 14:24:36: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 14:24:36: [STEP 5] Redirecting to Dashboard...
+13/04/2026 14:37:08: [STEP 1] Login attempt: admin at 13/04/2026 14:37:08
+13/04/2026 14:37:11: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 14:37:11: [STEP 5] Redirecting to Dashboard...
+13/04/2026 14:53:37: [STEP 1] Login attempt: admin at 13/04/2026 14:53:37
+13/04/2026 14:53:41: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 14:53:41: [STEP 5] Redirecting to Dashboard...
+13/04/2026 15:13:22: [STEP 1] Login attempt: admin at 13/04/2026 15:13:22
+13/04/2026 15:13:25: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 15:13:25: [STEP 5] Redirecting to Dashboard...
+13/04/2026 15:29:15: [STEP 1] Login attempt: admin at 13/04/2026 15:29:15
+13/04/2026 15:29:18: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 15:29:18: [STEP 5] Redirecting to Dashboard...
+13/04/2026 15:38:49: [STEP 1] Login attempt: admin at 13/04/2026 15:38:49
+13/04/2026 15:38:50: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 15:38:50: [STEP 5] Redirecting to Dashboard...
+13/04/2026 15:41:49: [STEP 1] Login attempt: admin at 13/04/2026 15:41:49
+13/04/2026 15:41:50: [STEP 2 & 3] DB login successful. Role: admin
+13/04/2026 15:41:50: [STEP 5] Redirecting to Dashboard...
+14/04/2026 23:39:38: [STEP 1] Login attempt: admin at 14/04/2026 23:39:38
+14/04/2026 23:40:47: [STEP 2 & 3] DB login successful. Role: admin
+14/04/2026 23:40:47: [STEP 5] Redirecting to Dashboard...
+14/04/2026 23:42:46: [STEP 1] Login attempt: admin at 14/04/2026 23:42:46
+14/04/2026 23:42:49: [STEP 2 & 3] DB login successful. Role: admin
+14/04/2026 23:42:49: [STEP 5] Redirecting to Dashboard...
+14/04/2026 23:47:21: [STEP 1] Login attempt: admin at 14/04/2026 23:47:21
+14/04/2026 23:47:21: [STEP 2 & 3] DB login successful. Role: admin
+14/04/2026 23:47:21: [STEP 5] Redirecting to Dashboard...
+23/04/2026 15:14:17: [STEP 1] Login attempt: admin at 23/04/2026 15:14:16
+23/04/2026 15:14:35: [STEP 2 & 3] DB login successful. Role: admin
+23/04/2026 15:14:35: [STEP 5] Redirecting to Dashboard...
+12/05/2026 16:00:10: [STEP 1] Login attempt: admin at 12/05/2026 16:00:10
+12/05/2026 16:00:21: [STEP 2 & 3] DB login successful. Role: admin
+12/05/2026 16:00:21: [STEP 5] Redirecting to Dashboard...
+14/05/2026 23:05:10: [STEP 1] Login attempt: admin at 14/05/2026 23:05:10
+14/05/2026 23:05:16: [FAILED] Database login failed or unauthorized.
+15/05/2026 00:23:19: [STEP 1] Login attempt: admin at 15/05/2026 00:23:19
+15/05/2026 00:23:24: [STEP 2 & 3] DB login successful. Role: admin
+15/05/2026 00:23:24: [STEP 5] Redirecting to Dashboard...
+15/05/2026 00:58:27: [STEP 1] Login attempt: admin at 15/05/2026 00:58:27
+15/05/2026 00:58:27: [STEP 2 & 3] DB login successful. Role: admin
+15/05/2026 00:58:27: [STEP 5] Redirecting to Dashboard...

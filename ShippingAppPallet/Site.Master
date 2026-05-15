@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ShippingAppPallet.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Shipping App</title>
+
+    <asp:PlaceHolder runat="server"><%: Scripts.Render("~/bundles/modernizr") %></asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" runat="server" />
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" runat="server" />
+    <link href="~/Content/css/select2.min.css" rel="stylesheet" runat="server" />
+    <link href="~/Content/DataTables/datatables.min.css" rel="stylesheet" runat="server" />
+    <link href="~/Content/fontawesome/css/all.css" rel="stylesheet" runat="server" />
+
+    <script src='<%= ResolveUrl("~/Scripts/jquery-3.7.1.min.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Scripts/jquery-ui-1.14.1.min.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Scripts/bootstrap.min.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Scripts/select2.min.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Scripts/select2.multi-checkboxes.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Scripts/DataTables/datatables.min.js") %>'></script>
+    <script src='<%= ResolveUrl("~/Content/fontawesome/js/all.js") %>'></script>
+
+    <style>
+        .body-content {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .navbar {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .topbar-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server" enctype="multipart/form-data">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <header id="topnav">
+            <%-- TOP BAR --%>
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark py-2">
+                <div class="container-fluid d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand m-0" runat="server" href="~/">
+                            XYZ
+                        </a>
+                    </div>
+                    <div class="d-none d-lg-block text-center flex-grow-1">
+                        <h1 class="topbar-title text-white">
+                            <asp:Label runat="server" ID="lblTitleSiteMaster">Shipping App</asp:Label>
+                        </h1>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end">
+                        <ul class="navbar-nav mb-0">
+                            <li class="nav-item dropdown">
+                                <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
+                                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 text-white" href="#" id="navProfile" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img runat="server" src="~/assets/images/user21.png" alt="user" class="rounded-circle" height="28" width="28" />
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="navProfile">
+                                        <li class="dropdown-item text-muted">Hi,
+                                            <asp:Literal ID="litFullName" runat="server"></asp:Literal>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider" />
+                                        </li>
+                                        <li><a class="dropdown-item text-dark" runat="server" href="~/Login.aspx?logout=true">Log off</a></li>
+                                    </ul>
+                                </asp:PlaceHolder>
+                                <asp:PlaceHolder ID="phLoggedOut" runat="server" Visible="false">
+                                    <a class="nav-link text-white d-flex align-items-center gap-2" runat="server" href="~/Login.aspx">
+                                        <img runat="server" src="~/assets/images/user21.png" alt="user" class="rounded-circle bg-light" height="28" width="28" />
+                                        <span class="d-none d-sm-inline">Login</span>
+                                    </a>
+                                </asp:PlaceHolder>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <%-- BOTTOM BAR --%>
+            <nav class="navbar navbar-expand-lg bg-white shadow-sm py-1">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-lg-none text-dark" href="#">Menu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<%--                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="<%= Page.ResolveUrl("~/") %>">Home</a>
+                            </li>--%>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-dark" href="#" id="navbarPA" role="button" data-bs-toggle="dropdown" aria-expanded="false">PA
+                                </a>
+                                <ul class="dropdown-menu shadow-sm" aria-labelledby="navbarPA">
+                                    <li><a class="dropdown-item" href="~/ListShipmentPlan" runat="server">Shipment Plan</a></li>
+                                    <li><a class="dropdown-item" href="~/ShipToLocation" runat="server">Project Site</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text-dark" href="#" id="navbarShipping" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shipping
+                                </a>
+                                <ul class="dropdown-menu shadow-sm" aria-labelledby="navbarShipping">
+                                    <li><a class="dropdown-item" href="~/ListShipmentPlan" runat="server">List Shipment Plan</a></li>
+                                    <li><a class="dropdown-item" href="~/ListPallet" runat="server">Palletizing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="body-content m-3">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr class="mt-5" />
+            <footer>
+                <p>Copyright &copy; <%: DateTime.Now.Year %> Logistic Intern</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
