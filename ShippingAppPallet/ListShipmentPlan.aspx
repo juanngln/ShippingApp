@@ -16,10 +16,10 @@
                     <i class="fa fa-plus"></i>
                     Add Shipment Plan
                 </a>
-                <asp:LinkButton ID="btnExportLOD" runat="server" CssClass="btn btn-sm btn-success ms-2" OnClick="btnExportLOD_Click">
+<%--                <asp:LinkButton ID="btnExportLOD" runat="server" CssClass="btn btn-sm btn-success ms-2" OnClick="btnExportLOD_Click">
                     <i class="fa fa-download"></i>
                     Export LOD Template
-                </asp:LinkButton>
+                </asp:LinkButton>--%>
             </div>
             <div class="card-body">
                 <asp:PlaceHolder ID="PlaceHolder1" runat="server" />

@@ -28,15 +28,15 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .rotate-icon.rotated {
-            transform: rotate(180deg);
-        }
+            .rotate-icon.rotated {
+                transform: rotate(180deg);
+            }
     </style>
 
     <div class="">
         <div class="row">
             <div class="col-md-12 mt-2">
-                <h5><i class="fa-solid fa-box-archive"></i> PREPARE BY SCAN BOX BARCODE</h5>
+                <h5><i class="fa-solid fa-box-archive"></i>PREPARE BY SCAN BOX BARCODE</h5>
             </div>
         </div>
 
@@ -127,7 +127,7 @@
                                     </tr>
                                 </ItemTemplate>
                                 <FooterTemplate>
-                                        </tbody>
+                                    </tbody>
                                     </table>
                                 </FooterTemplate>
                             </asp:Repeater>
@@ -168,8 +168,9 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
-                                        <h5>Total PN : <i id="partDetail_TotalPartNumber" runat="server"></i></h5>
-                                        <h5>Total BOX : <i id="partDetail_TotalBOX" runat="server"></i></h5>
+                                        <h5>Total PN : <span id="partDetail_TotalPartNumber" runat="server"></span></h5>
+                                        <h5>Total BOX : <span id="partDetail_TotalBOX" runat="server"></span></h5>
+                                        <h5>Total QTY : <span id="partDetail_TotalQTY" runat="server"></span></h5>
                                     </div>
                                     <div class="col-md-12 m-b-30">
                                         <%-- Table Box --%>
@@ -327,7 +328,26 @@
         </div>
     </div>
 
+    <audio id="audioSuccess" src="/assets/sound/success_sound.mp3" preload="auto"></audio>
+    <audio id="audioError" src="/assets/sound/alarm_warning_sound.mp3" preload="auto"></audio>
+
     <script type="text/javascript">
+        function playValidationSound(isError) {
+            var audioId = isError ? 'audioError' : 'audioSuccess';
+            var audio = document.getElementById(audioId);
+
+            if (audio) {
+                audio.currentTime = 0;
+                var playPromise = audio.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.catch(function (error) {
+                        console.log("Autoplay dicegah oleh browser atau file tidak ditemukan: ", error);
+                    });
+                }
+            }
+        }
+
         function setFocus() {
             var txtScan = document.getElementById('<%= txtBoxScan.ClientID %>');
             if (txtScan) txtScan.focus();
@@ -335,7 +355,6 @@
 
         function initExpandableRows() {
             $('[data-bs-toggle="collapse"]').removeAttr('data-bs-toggle');
-
             $('#tblMain tr.collapse').removeClass('collapse').hide();
 
             $('#tblMain').off('click', 'tr[data-bs-target]').on('click', 'tr[data-bs-target]', function () {
@@ -366,4 +385,5 @@
             });
         }
     </script>
+
 </asp:Content>

@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web.UI;
 using QRCoder;
 
@@ -16,15 +17,11 @@ namespace ShippingAppPallet
             if (!IsPostBack)
             {
                 string id = Request.QueryString["Id"];
-
                 if (!string.IsNullOrEmpty(id))
                 {
-                    // QR Code berisi URL detail shipment
-                    string qrData = "http://localhost:63420/ListPallet.aspx?Id=" + id;
-                    imgQrCode.ImageUrl = GenQrCode(qrData);
+                    string qrData = LoadPalletDetail(id);
 
-                    // Panggil fungsi untuk memuat data tabel
-                    LoadPalletDetail(id);
+                    imgQrCode.ImageUrl = GenQrCode(qrData);
                 }
             }
         }
@@ -36,7 +33,6 @@ namespace ShippingAppPallet
                 QRCodeGenerator qrGenerator = new QRCodeGenerator();
                 QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
                 QRCode qrCode = new QRCode(qrCodeData);
-
                 using (Bitmap bitmap = qrCode.GetGraphic(6))
                 {
                     bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
@@ -45,7 +41,7 @@ namespace ShippingAppPallet
             }
         }
 
-        private void LoadPalletDetail(string palletId)
+        private string LoadPalletDetail(string palletId)
         {
             DataTable dtSummary = new DataTable();
             dtSummary.Columns.Add("Item");
@@ -53,14 +49,15 @@ namespace ShippingAppPallet
             dtSummary.Columns.Add("Total Qty");
             dtSummary.Columns.Add("Production Date");
 
+            StringBuilder qrText = new StringBuilder();
+            qrText.AppendLine($"ID:{palletId}");
+
             string connString = System.Configuration.ConfigurationManager.ConnectionStrings["ShippingConnection"].ConnectionString;
             string productionDate = "";
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                conn.Open(); // Buka koneksi karena kita akan melakukan dua eksekusi
-
-                // 1. Ambil Production Date dari CreatedDate di tabel udt_shPallet
+                conn.Open();
                 using (SqlCommand cmdDate = new SqlCommand("SELECT CreatedDate FROM udt_shPallet WHERE ID = @ID", conn))
                 {
                     cmdDate.Parameters.AddWithValue("@ID", palletId);
@@ -68,7 +65,6 @@ namespace ShippingAppPallet
 
                     if (result != null && result != DBNull.Value)
                     {
-                        // Anda bisa mengubah format "yyyy-MM-dd" sesuai dengan format standar perusahaan
                         productionDate = Convert.ToDateTime(result).ToString("yyyy-MM-dd");
                     }
                 }
@@ -86,7 +82,6 @@ namespace ShippingAppPallet
 
                         if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                         {
-                            // Grouping SEKARANG HANYA berdasarkan PartNumber (Item)
                             var summaryData = ds.Tables[0].AsEnumerable()
                                 .GroupBy(r => r["PartNumber"].ToString())
                                 .Select(g => new
@@ -94,22 +89,28 @@ namespace ShippingAppPallet
                                     Item = g.Key,
                                     TotalBox = g.Select(r => r["CartonBoxId"].ToString()).Distinct().Count(),
                                     TotalQty = g.Sum(r => Convert.ToInt32(r["Qty"])),
-                                    ProductionDate = productionDate // Set semua item dengan tanggal dari udt_shPallet
+                                    ProductionDate = productionDate
                                 }).ToList();
 
-                            // Masukkan data hasil grouping (summary) ke dalam tabel
                             foreach (var item in summaryData)
                             {
                                 dtSummary.Rows.Add(item.Item, item.TotalBox, item.TotalQty, item.ProductionDate);
+
+                                qrText.AppendLine($"{item.Item}|Box:{item.TotalBox}|Qty:{item.TotalQty}");
                             }
+                        }
+                        else
+                        {
+                            qrText.AppendLine("Status:No Details");
                         }
                     }
                 }
             }
 
-            // Binding data ke GridView
             gvPalletDetail.DataSource = dtSummary;
             gvPalletDetail.DataBind();
+
+            return qrText.ToString();
         }
     }
 }

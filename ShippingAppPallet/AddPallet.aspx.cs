@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
@@ -62,6 +63,7 @@ namespace ShippingAppPallet
         protected HtmlGenericControl lblPalletNumber;
         protected HtmlGenericControl partDetail_TotalPartNumber;
         protected HtmlGenericControl partDetail_TotalBOX;
+        protected HtmlGenericControl partDetail_TotalQTY;
         protected HtmlGenericControl lblMessage;
 
         protected DropDownList ddlCustomer;
@@ -87,7 +89,6 @@ namespace ShippingAppPallet
             if (!IsPostBack)
             {
                 BindShipmentPlanDropdown();
-
                 if (Request.QueryString["id"] != null)
                 {
                     LoadExistingPallet(Request.QueryString["id"]);
@@ -95,7 +96,6 @@ namespace ShippingAppPallet
                 else
                 {
                     Session["ScannedBoxes"] = new List<BoxDetail>();
-
                     btnComplete.Text = "Complete";
 
                     ShowPalletNumberPreview();
@@ -114,7 +114,6 @@ namespace ShippingAppPallet
         private void LoadExistingPallet(string palletIdStr)
         {
             if (!int.TryParse(palletIdStr, out int palletId)) return;
-
             using (var conn = new SqlConnection(DbConnectionString))
             {
                 conn.Open();
@@ -130,7 +129,6 @@ namespace ShippingAppPallet
 
                             if (ddlCustomer.Items.FindByValue(customer) == null && !string.IsNullOrEmpty(customer))
                                 ddlCustomer.Items.Add(new ListItem(customer, customer));
-
                             ddlCustomer.SelectedValue = customer;
                             btnComplete.Text = "Update Pallet";
                         }
@@ -165,7 +163,6 @@ namespace ShippingAppPallet
                     }
                 }
                 SetSessionBoxes(loadedBoxes);
-
                 var distinctPlans = loadedBoxes.Select(b => b.ShipmentPlan).Where(p => !string.IsNullOrEmpty(p)).Distinct().ToList();
                 if (distinctPlans.Count == 1)
                 {
@@ -203,7 +200,6 @@ namespace ShippingAppPallet
         
         -- Gabungkan Prefix dengan 4 digit Sequence (0001, 0002, dst)
         SELECT @Prefix + RIGHT('0000' + CAST(@NextSeq AS VARCHAR), 4);";
-
             if (existingConn != null && existingConn.State == ConnectionState.Open)
             {
                 using (var cmd = new SqlCommand(query, existingConn))
@@ -297,10 +293,8 @@ namespace ShippingAppPallet
         {
             if (string.IsNullOrWhiteSpace(planId))
                 return new ValidationResult { IsValid = false, Message = "Select Shipment Plan" };
-
             if (string.IsNullOrWhiteSpace(boxNumber))
                 return new ValidationResult { IsValid = false, Message = "Box Number invalid" };
-
             using (var conn = new SqlConnection(DbConnectionString))
             {
                 conn.Open();
@@ -330,7 +324,6 @@ namespace ShippingAppPallet
 
             if (currentSessionBoxes.Any(b => string.Equals(b.BoxNumber, boxNumber, StringComparison.OrdinalIgnoreCase)))
                 return new ValidationResult { IsValid = true, Message = "Box Updated" };
-
             return new ValidationResult { IsValid = true, Message = "Box Scan Valid" };
         }
         #endregion
@@ -367,7 +360,6 @@ namespace ShippingAppPallet
             ddlShipmentPlan.Items.Clear();
             ddlShipmentPlan.Items.Add(new ListItem("-- select shipment plan --", ""));
             foreach (var p in plans) ddlShipmentPlan.Items.Add(new ListItem(p.ShipmentPlanID, p.ShipmentPlanID));
-
             if (!string.IsNullOrEmpty(prevSelected) && ddlShipmentPlan.Items.FindByValue(prevSelected) != null)
                 ddlShipmentPlan.SelectedValue = prevSelected;
         }
@@ -386,7 +378,6 @@ namespace ShippingAppPallet
             {
                 if (ddlCustomer.Items.FindByValue(selectedPlan.Customer) == null)
                     ddlCustomer.Items.Add(new ListItem(selectedPlan.Customer, selectedPlan.Customer));
-
                 ddlCustomer.SelectedValue = selectedPlan.Customer;
 
                 bool isNonVHub = !string.IsNullOrEmpty(selectedPlan.Status) && selectedPlan.Status.IndexOf("Non-V-Hub", StringComparison.OrdinalIgnoreCase) >= 0;
@@ -395,7 +386,6 @@ namespace ShippingAppPallet
             }
 
             BindShipmentPlanForPlan(planId);
-
             // Re-validate existing session boxes
             var boxes = GetSessionBoxes();
             foreach (var b in boxes)
@@ -490,7 +480,6 @@ namespace ShippingAppPallet
                     int total = detail.Boxes.Count;
                     int valid = detail.Boxes.Count(b => b.ValidStatus.Contains("#28a745"));
                     int invalid = detail.Boxes.Count(b => b.ValidStatus.Contains("#dc3545"));
-
                     if (valid == total)
                     {
                         detail.OverallStatus = "<span style=\"color: #28a745; font-weight: bold;\">Matched</span>";
@@ -537,13 +526,11 @@ namespace ShippingAppPallet
                 WHERE UPPER(d.Item) IN ({inClause}) 
                 GROUP BY p.ShipmentPlanID 
                 ORDER BY COUNT(d.Item) DESC";
-
             using (var conn = new SqlConnection(DbConnectionString))
             using (var cmd = new SqlCommand(query, conn))
             {
                 for (int i = 0; i < pns.Count; i++)
                     cmd.Parameters.AddWithValue($"@pn{i}", pns[i]);
-
                 conn.Open();
                 var result = cmd.ExecuteScalar();
                 if (result != null) bestPlan = result.ToString();
@@ -553,7 +540,6 @@ namespace ShippingAppPallet
 
             if (ddlShipmentPlan.Items.FindByValue(bestPlan) != null)
                 ddlShipmentPlan.SelectedValue = bestPlan;
-
             BindShipmentPlanForPlan(bestPlan);
         }
 
@@ -574,7 +560,6 @@ namespace ShippingAppPallet
             string editIdStr = Request.QueryString["id"];
             int editId = 0;
             bool isEditMode = !string.IsNullOrEmpty(editIdStr) && int.TryParse(editIdStr, out editId);
-
             using (SqlConnection conn = new SqlConnection(DbConnectionString))
             {
                 conn.Open();
@@ -672,7 +657,6 @@ namespace ShippingAppPallet
                         lblMessage.InnerHtml = duplicateBoxes.Length > 0
                             ? $"✅ Pallet {(isEditMode ? "updated" : "created")}: {palletNumber}<br/>⚠️ Some boxes already scanned in other pallets:<br/>{duplicateBoxes.ToString().Replace(Environment.NewLine, "<br/>")}"
                             : $"✅ Pallet {(isEditMode ? "updated" : "created")} with number: {palletNumber}";
-
                         if (!isEditMode) ResetPalletizingState(conn);
                     }
                     catch (Exception ex)
@@ -689,6 +673,14 @@ namespace ShippingAppPallet
         #region Session Management & Table UI Binding
         private List<BoxDetail> GetSessionBoxes() => (Session["ScannedBoxes"] as List<BoxDetail>) ?? new List<BoxDetail>();
         private void SetSessionBoxes(List<BoxDetail> boxes) => Session["ScannedBoxes"] = boxes ?? new List<BoxDetail>();
+        private string FormatScanSummary(int scanned, int target)
+        {
+            string color = "#ff9800";
+            if (scanned == target) color = "#28a745";
+            else if (scanned > target) color = "#dc3545";
+
+            return $"<span style=\"color: {color}; font-weight: bold;\">{scanned}</span> of {target}";
+        }
 
         private void RebindBoxesAndSummary()
         {
@@ -718,11 +710,53 @@ namespace ShippingAppPallet
             }
             if (gvSummary != null) { gvSummary.DataSource = dtSummary; gvSummary.DataBind(); }
 
-            partDetail_TotalPartNumber.InnerText = boxes.Select(b => b.PartNumber).Distinct().Count().ToString();
-            partDetail_TotalBOX.InnerText = boxes.Count.ToString();
+            int scannedPN = boxes.Select(b => b.PartNumber).Distinct().Count();
+            int scannedBox = boxes.Count;
+            int scannedQty = boxes.Sum(b => b.Qty);
+
+            int targetPN = 0, targetBox = 0, targetQty = 0;
+            string planId = ddlShipmentPlan.SelectedValue;
+
+            if (!string.IsNullOrEmpty(planId))
+            {
+                using (var conn = new SqlConnection(DbConnectionString))
+                {
+                    conn.Open();
+
+                    // PERBAIKAN: Fokus menghitung baris alokasi secara spesifik agar 
+                    // label partDetail di atas tabel tidak menggelembung ke jumlah total plan
+                    using (var cmd = new SqlCommand(@"
+                SELECT COUNT(DISTINCT Item) as TargetPN,
+                       COUNT(CartonBoxId) as TargetBox,
+                       ISNULL(SUM(QTY), 0) as TargetQty
+                FROM udt_CartonBoxAllocation
+                WHERE ShipmentPlanId = @planId", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@planId", planId);
+                        using (var r = cmd.ExecuteReader())
+                        {
+                            if (r.Read())
+                            {
+                                targetPN = Convert.ToInt32(r["TargetPN"]);
+                                targetBox = Convert.ToInt32(r["TargetBox"]);
+                                targetQty = Convert.ToInt32(r["TargetQty"]);
+                            }
+                        }
+                    }
+                }
+            }
+
+            partDetail_TotalPartNumber.InnerHtml = FormatScanSummary(scannedPN, targetPN);
+            partDetail_TotalBOX.InnerHtml = FormatScanSummary(scannedBox, targetBox);
+            partDetail_TotalQTY.InnerHtml = FormatScanSummary(scannedQty, targetQty);
         }
 
-        private void ShowInlineStatus(string message, bool isError) => lblMessage.InnerHtml = (isError ? "❌ " : "✅ ") + Server.HtmlEncode(message);
+        private void ShowInlineStatus(string message, bool isError)
+        {
+            lblMessage.InnerHtml = (isError ? "❌ " : "✅ ") + Server.HtmlEncode(message);
+            string script = isError ? "playValidationSound(true);" : "playValidationSound(false);";
+            ScriptManager.RegisterStartupScript(this, GetType(), "PlayValidationSound", script, true);
+        }
 
         private void ClearFooterInputs()
         {

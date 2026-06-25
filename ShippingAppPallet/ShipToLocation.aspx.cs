@@ -16,7 +16,6 @@ namespace ShippingAppPallet
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Render tabel hanya saat pertama kali load
             if (!IsPostBack)
             {
                 RenderTableFromDb();
@@ -40,7 +39,6 @@ namespace ShippingAppPallet
                     return;
                 }
 
-                // Baca Excel -> DataTable sesuai schema tabel ProjectSite
                 var dtExcel = ReadExcelToDataTable(uploadExcel.FileContent);
                 if (dtExcel.Rows.Count == 0)
                 {
@@ -48,10 +46,8 @@ namespace ShippingAppPallet
                     return;
                 }
 
-                // Simpan ke DB (bulk insert ke tabel final)
                 int inserted = BulkInsertToDb(dtExcel);
 
-                // Render ulang tabel dari SP
                 RenderTableFromDb();
 
                 ShowAlert($"Upload success {inserted} row(s) saved", "success");
@@ -62,13 +58,6 @@ namespace ShippingAppPallet
             }
         }
 
-        /// <summary>
-        /// Membaca file Excel dan memetakan ke DataTable:
-        /// FlexProject, PartNumber, ProductFamily, SiteName, BPCode, AddressDetails
-        /// - Header dicari secara dinamis (boleh tidak di baris pertama).
-        /// - Kolom wajib: BP Code, Ship to location /Site Name, Address details.
-        /// - Kolom lain opsional.
-        /// </summary>
         private DataTable ReadExcelToDataTable(System.IO.Stream stream)
         {
             var dt = new DataTable("ProjectSiteImport");
@@ -89,7 +78,6 @@ namespace ShippingAppPallet
                     }
                 });
 
-                // Guard: pastikan ada worksheet
                 if (ds.Tables.Count == 0)
                     throw new InvalidOperationException("Worksheet tidak ditemukan di file Excel.");
 
@@ -97,7 +85,6 @@ namespace ShippingAppPallet
                 if (sheet.Rows.Count == 0)
                     throw new InvalidOperationException("Sheet kosong.");
 
-                // Header minimal yang wajib ada di file
                 var mustHaveHeaders = new[]
                 {
                     "BP Code",
@@ -105,7 +92,6 @@ namespace ShippingAppPallet
                     "Address details"
                 };
 
-                // Temukan baris header di mana ketiga header minimum ini muncul
                 int headerRow = FindHeaderRowIndex(sheet, mustHaveHeaders);
                 if (headerRow < 0)
                 {
@@ -127,12 +113,10 @@ namespace ShippingAppPallet
 
                 var colMap = BuildColumnMap(sheet, headerRow, targetToHeader);
 
-                // Baca data di bawah baris header
                 for (int i = headerRow + 1; i < sheet.Rows.Count; i++)
                 {
                     var row = sheet.Rows[i];
 
-                    // Baris valid minimal harus punya BPCode
                     var bp = GetCellString(row, colMap, "BPCode");
                     if (string.IsNullOrWhiteSpace(bp))
                         continue;
@@ -152,7 +136,7 @@ namespace ShippingAppPallet
             return dt;
         }
 
-        // ---- Helper: cari baris header dengan mencocokkan semua mustHaveHeaders ----
+        // ---- Helper ----
         private int FindHeaderRowIndex(DataTable sheet, string[] mustHaveHeaders)
         {
             for (int r = 0; r < sheet.Rows.Count; r++)
@@ -170,7 +154,6 @@ namespace ShippingAppPallet
             return -1;
         }
 
-        // ---- Helper: bangun peta kolom target -> index kolom di sheet ----
         private Dictionary<string, int> BuildColumnMap(
             DataTable sheet,
             int headerRow,
@@ -178,7 +161,6 @@ namespace ShippingAppPallet
         {
             var map = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
-            // Kumpulkan pasangan (index, namaHeaderTernormalisasi) dari baris header
             var headers = sheet.Rows[headerRow].ItemArray
                 .Select((v, idx) => new { idx, name = NormalizeHeader(v) })
                 .Where(x => !string.IsNullOrWhiteSpace(x.name))
@@ -198,7 +180,6 @@ namespace ShippingAppPallet
                 }
                 else
                 {
-                    // WAJIB hanya untuk tiga kolom berikut:
                     bool isRequired =
                         targetName.Equals("BPCode", StringComparison.OrdinalIgnoreCase) ||
                         targetName.Equals("SiteName", StringComparison.OrdinalIgnoreCase) ||
@@ -207,7 +188,6 @@ namespace ShippingAppPallet
                     if (isRequired)
                         throw new InvalidOperationException($"Kolom header '{kvp.Value}' tidak ditemukan pada baris header.");
 
-                    // Jika opsional, tandai index -1 agar pembacaan mengembalikan null
                     map[targetName] = -1;
                 }
             }
@@ -215,17 +195,15 @@ namespace ShippingAppPallet
             return map;
         }
 
-        // ---- Helper: normalisasi header (trim, hilangkan spasi ganda) ----
         private string NormalizeHeader(object cell)
         {
             if (cell == null || cell == DBNull.Value) return null;
             var s = Convert.ToString(cell, CultureInfo.InvariantCulture)?.Trim();
             if (string.IsNullOrEmpty(s)) return null;
-            s = System.Text.RegularExpressions.Regex.Replace(s, @"\s+", " "); // spasi ganda -> satu
+            s = System.Text.RegularExpressions.Regex.Replace(s, @"\s+", " ");
             return s;
         }
 
-        // ---- Helper: ambil isi sel sebagai string aman ----
         private string GetCellString(DataRow row, Dictionary<string, int> colMap, string targetKey)
         {
             int idx;
@@ -281,7 +259,6 @@ namespace ShippingAppPallet
             return dt.Rows.Count;
         }
 
-        // Render tabel dari SP (mengikuti logic kamu)
         private void RenderTableFromDb()
         {
             DataSet dt = this.GetData();
